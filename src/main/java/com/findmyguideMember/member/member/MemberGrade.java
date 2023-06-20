@@ -1,4 +1,4 @@
-package com.findmyguideMember.member.domain;
+package com.findmyguideMember.member.member;
 
 public enum MemberGrade {
 

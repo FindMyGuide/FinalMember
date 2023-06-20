@@ -1,5 +1,7 @@
-package com.findmyguideMember.member.domain;
+package com.findmyguideMember.member.member.domain;
 
+import com.findmyguideMember.member.member.MemberGrade;
+import com.findmyguideMember.member.tour_product.domain.TourListProduct;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,10 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Member {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     @Column(name = "member_id")
     private Long id;
 
