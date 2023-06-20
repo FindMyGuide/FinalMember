@@ -24,9 +24,7 @@ public class TourListProductService {
 
     }
 
-    public void delete(TourListProduct tourListProduct){
-        tourListProductRepository.deleteById(tourListProduct.getId());
-    }
+
 
 
 
