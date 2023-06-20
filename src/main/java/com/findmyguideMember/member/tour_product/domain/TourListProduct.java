@@ -2,9 +2,7 @@ package com.findmyguideMember.member.tour_product.domain;
 
 import com.findmyguideMember.member.member.domain.Member;
 import com.findmyguideMember.member.tour_product.enum_language.Language;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -14,15 +12,15 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TourListProduct {
 
     @Id
     @GeneratedValue
     @Column(name = "tourlist_id")
     private Long id;
-
-    @ManyToOne
-    private Member member;
 
     private String title;
 
@@ -38,9 +36,6 @@ public class TourListProduct {
 
     // 시간 포맷 설정 가능
     private LocalDate tourEndDate;
-
-
-
 
 
 }
