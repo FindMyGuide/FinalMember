@@ -2,6 +2,8 @@ package com.findmyguideMember.member.tour_product.service;
 
 
 import com.findmyguideMember.member.tour_product.domain.TourListProduct;
+import com.findmyguideMember.member.tour_product.dto.TourListProductRequest;
+import com.findmyguideMember.member.tour_product.dto.TourListProductResponse;
 import com.findmyguideMember.member.tour_product.repository.TourListProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,13 +17,14 @@ public class TourListProductService {
     private final TourListProductRepository  tourListProductRepository;
 
     @Transactional
-    public void save(TourListProduct tourListProduct){
-        tourListProductRepository.save(tourListProduct);
+    public TourListProductResponse save(TourListProductRequest tourListProductRequest){
+
+        TourListProduct save = tourListProductRepository.save(tourListProductRequest.toTourListProduct());
+        return new TourListProductResponse(save);
+
     }
 
-    public void delete(TourListProduct tourListProduct){
-        tourListProductRepository.deleteById(tourListProduct.getId());
-    }
+
 
 
 

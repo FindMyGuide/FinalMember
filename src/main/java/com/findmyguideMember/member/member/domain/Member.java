@@ -27,6 +27,6 @@ public class Member {
 
     private MemberGrade grade;
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany
     private List<TourListProduct> TourListProducts = new ArrayList<>();
 }
