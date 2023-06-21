@@ -2,10 +2,10 @@ package com.findmyguideMember.member.busanApi.controller;
 
 import com.findmyguideMember.member.busanApi.service.BusanApiService;
 import lombok.RequiredArgsConstructor;
+import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 
@@ -13,10 +13,11 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class BusanApiController {
 
-    private final BusanApiService busanApiService = new BusanApiService();
+    private final BusanApiService busanApiService;
 
-    @RequestMapping(value="/testValue", method = RequestMethod.GET)
-    public String result() throws IOException {
+    @GetMapping("/busanApi")
+    @ResponseBody
+    public String busanResult() {
         return busanApiService.getApi();
     }
 }
