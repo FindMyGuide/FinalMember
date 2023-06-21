@@ -18,5 +18,4 @@ public class TourListProductResponse {
         this.title = tourListProduct.getTitle();
 
     }
-
 }

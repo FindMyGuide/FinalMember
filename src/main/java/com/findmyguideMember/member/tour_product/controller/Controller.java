@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
-
 @org.springframework.stereotype.Controller
 @RequiredArgsConstructor
 @RequestMapping("/tourListProduct")
@@ -19,16 +17,11 @@ public class Controller {
     private TourListProductService tourListProductService;
 
     @PostMapping
-    public TourListProductResponse save (@RequestBody
-                                                         final TourListProductRequest
-                                                         tourListProductRequest
-                                                         ){
-
-        TourListProductResponse save = tourListProductService.save(tourListProductRequest);
-        return save;
-
+    public ResponseEntity<TourListProductResponse> register(
+            @RequestBody final TourListProductRequest tourListProductRequest) {
+        TourListProductResponse tourListProductResponse =  tourListProductService.save(tourListProductRequest);
+        return ResponseEntity.ok().body(tourListProductResponse);
     }
-
 
 
 
