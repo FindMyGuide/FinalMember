@@ -1,10 +1,13 @@
 package com.findmyguideMember.member.qna.domain;
 
 import com.findmyguideMember.member.qna.enum_category.Category;
+import com.findmyguideMember.member.qna_answer.domain.QnaAnswer;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -30,4 +33,6 @@ public class Qna {
     @Enumerated(EnumType.STRING)
     private Category category;
 
+    @OneToMany
+    private List<QnaAnswer> qnaAnswerList = new ArrayList<>();
 }

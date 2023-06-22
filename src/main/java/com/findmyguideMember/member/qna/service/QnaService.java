@@ -30,6 +30,19 @@ public class QnaService {
         // 맞는지 모르겠음
         return null;
     }
+//    GPT
+//    @Transactional
+//    public QnaResponse update(Long qnaId, String title, String content) {
+//        Qna qna = qnaRepository.findById(qnaId).orElse(null);
+//        if (qna != null) {
+//            qna.setTitle(title);
+//            qna.setContent(content);
+//            return new QnaResponse("Update successful");
+//        } else {
+//            return new QnaResponse("Qna not found");
+//        }
+//    }
+
 
     public void delete(Qna qna) {
         qnaRepository.deleteById(qna.getId());
