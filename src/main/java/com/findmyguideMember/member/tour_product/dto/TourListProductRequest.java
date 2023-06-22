@@ -13,9 +13,13 @@ public class TourListProductRequest {
 
     private String title;
 
+    private String content;
+
+
     public TourListProduct toTourListProduct(){
         return TourListProduct.builder()
                 .title(title)
+                .content(content)
                 .build();
     }
 
