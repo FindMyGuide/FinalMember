@@ -24,7 +24,7 @@ public class BusanApiService {
 
     private final BusanApiRepository busanApiRepository;
 
-
+    @Transactional
     public String getApi() {
         String result;
 

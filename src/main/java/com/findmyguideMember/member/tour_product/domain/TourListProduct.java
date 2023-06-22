@@ -28,11 +28,12 @@ public class TourListProduct {
     @ManyToOne
     private Member member;
 
-    @OneToMany
-    private List<TourLocation> tourLocations = new ArrayList<>();
-
-    @OneToMany
-    private List<Restaurant> restaurants = new ArrayList<>();
+    // 투어리스트에는 알아서 담을 듯
+//    @OneToMany
+//    private List<TourLocation> tourLocations = new ArrayList<>();
+//
+//    @OneToMany
+//    private List<Restaurant> restaurants = new ArrayList<>();
 
     private String title;
 
