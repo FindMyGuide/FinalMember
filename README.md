@@ -8,11 +8,13 @@
 
 # 2. 개발 진행 상황
 
-| 개발자 | Commit Date | Commit Content                      |
-|-----|-------------|-------------------------------------|
-| 태원  | 23.06.20    | 프로젝트 생성                             |
-| 범규  | 23.06.21    | create : tour_location, restaurant  |
-| 범규  | 23.06.22    | create : qna, qna_answer            |
+| 개발자 | Commit Date | Commit Content                            |
+|-----|-------------|-------------------------------------------|
+| 태원  | 23.06.20    | 프로젝트 생성                                   |
+| 범규  | 23.06.21    | create : tour_location, restaurant        |
+|  범규 | 23.06.22    | create : qna, qna_answer                  |
+| 범규  | 23.06.24    | create : review(restaurnt, tour_location) |
+
 # 3. Code Convention
 
     메소드명 -> 여러개의 단어가 섞이는 경우 단어의 첫번째 문자는 대문자이어야 한다.

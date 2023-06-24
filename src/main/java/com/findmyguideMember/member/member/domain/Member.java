@@ -1,6 +1,8 @@
 package com.findmyguideMember.member.member.domain;
 
 import com.findmyguideMember.member.member.MemberGrade;
+import com.findmyguideMember.member.restaurant_review.domain.RestaurantReview;
+import com.findmyguideMember.member.tour_location_review.domain.TourLocationReview;
 import com.findmyguideMember.member.tour_product.domain.TourListProduct;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,4 +31,10 @@ public class Member {
 
     @OneToMany(mappedBy = "member")
     private List<TourListProduct> TourListProducts = new ArrayList<>();
+
+    @OneToMany
+    private List<TourLocationReview> tourLocationReviews = new ArrayList<>();
+
+    @OneToMany
+    private List<RestaurantReview> restaurantReviews = new ArrayList<>();
 }

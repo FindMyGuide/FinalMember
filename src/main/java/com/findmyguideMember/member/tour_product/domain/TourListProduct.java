@@ -4,6 +4,7 @@ import com.findmyguideMember.member.member.domain.Member;
 import com.findmyguideMember.member.qna.domain.Qna;
 import com.findmyguideMember.member.restaurant.domain.Restaurant;
 import com.findmyguideMember.member.tour_location.domain.TourLocation;
+import com.findmyguideMember.member.tour_location_review.domain.TourLocationReview;
 import com.findmyguideMember.member.tour_product.enum_language.Language;
 import lombok.*;
 
